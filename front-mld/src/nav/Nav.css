@@ -1,0 +1,38 @@
+/* Navbar branding (logo/name) */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  /* Styling for each nav link */
+  .navbar-nav .nav-link {
+    margin-right: 20px;
+    font-size: 16px;
+    color: #333; /* Slightly darker color for professional look */
+  }
+  
+  /* Dropdown on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Smooth transition for the dropdown */
+    background-color: #f8f9fa; /* Light gray background for dropdown */
+  }
+  
+  /* Styling for dropdown menu items */
+  .dropdown-menu .dropdown-item {
+    font-size: 15px;
+    color: #007bff; /* Bootstrap primary color */
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff;
+    color: white; /* Inverse color on hover for readability */
+  }
+  
+  /* Navbar link active styling */
+  .nav-link.active {
+    color: #007bff; /* Highlight active link */
+    font-weight: bold;
+  }
+  

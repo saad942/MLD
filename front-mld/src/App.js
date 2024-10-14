@@ -1,8 +1,15 @@
-
+import { BrowserRouter as Router, Routes} from 'react-router-dom';
+import Nav from './nav/Nav'
 function App() {
   return (
     <div className="App">
-      <h1>MLD</h1>
+      <Nav/>
+      <Router>
+
+        <Routes>
+
+        </Routes>
+      </Router>
     </div>
   );
 }
