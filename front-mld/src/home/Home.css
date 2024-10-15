@@ -1,0 +1,48 @@
+.cont{
+    background-image: url('/public/images/eberhard-grossgasteiger-cs0sK0gzqCU-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:89.8vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* .Home {
+    text-align: left;
+  } */
+  
+  .log {
+    background-color: black; /* Dark background for the log section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for inner spacing */
+    color: white; /* Text color */
+}
+
+.text-success {
+    color: #28a745; /* Bootstrap success color for the heading */
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.social-icons {
+    font-size: 24px; /* Size of the icons */
+}
+
+.social-icons a {
+    color: #28a745; /* Color for the icons */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #218838; /* Darker green on hover */
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter color for better visibility */
+    opacity: 1; /* Ensures the color is applied in all browsers */
+    font-style: italic; /* Optional: Makes the placeholder italic */
+}

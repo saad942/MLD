@@ -5,9 +5,9 @@ import './Nav.css';  // Custom CSS
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark  ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">Miloudi</a>
+          <a className="navbar-brand" href="#" >Halima</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -32,14 +32,34 @@ function App() {
             </ul>
           </div>
           <div >
-            <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-                <a className="nav-link" href="#">Sign up</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Login</a>
-              </li>
-            </ul>
+          <input 
+    type='text' 
+    style={{ 
+        padding: '10px', 
+        border: '2px solid #28a745', /* Green border */
+        borderRadius: '5px', 
+        fontSize: '13px', 
+        width: '350px' 
+    }} 
+    placeholder="Search..." 
+/>
+<button 
+    style={{ 
+        padding: '10px 15px', 
+        backgroundColor: '#28a745', /* Green background */
+        color: 'white', 
+        border: 'none', 
+        borderRadius: '5px', 
+        fontSize: '13px', 
+        marginLeft: '5px', 
+        cursor: 'pointer', 
+        transition: 'background-color 0.3s' 
+    }} 
+    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#218838'} /* Darker green on hover */
+    onMouseLeave={e => e.currentTarget.style.backgroundColor = '#28a745'} /* Revert to original */
+>
+    Search
+</button>
 
           </div>
         </div>
