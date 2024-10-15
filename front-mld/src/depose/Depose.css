@@ -1,0 +1,30 @@
+
+form {
+    
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form input {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}

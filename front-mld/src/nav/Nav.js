@@ -17,7 +17,7 @@ function App() {
                 <a className="nav-link" href="#">A propos de nous</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Recrutement</a>
+                <a className="nav-link" href="/depose">Recrutement</a>
               </li>
               <li className="nav-item dropdown">
                 <a href="#" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
