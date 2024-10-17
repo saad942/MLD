@@ -1,30 +1,48 @@
 const User = require('../models/models-Usr')
+const express = require('express');
 
-const Login = async(req,res)=>{
+const Login = async (req, res) => {
     const { email, password } = req.body;
 
-    try{
-    const user = User.findOne({email,password});
-    if(!user){
-        return res.status(401).json({ message: 'Invalid username or password' });
+    try {
+        // Find user by email
+        const user = await User.findOne({ email });
+        
+        // Check if the user exists
+        if (!user) {
+            return res.status(401).json({ message: 'Invalid username or password' });
+        }
 
+        // Directly compare password
+        if (user.password !== password) {
+            return res.status(401).json({ message: 'Invalid username or password' });
+        }
+
+        // Successful login, return user data
+        return res.status(200).json({
+            status: 'success',
+            message: 'Login successful',
+            data: {
+                username: user.username,
+                email: user.email,
+                // Add other user details as needed
+            },
+        });
+    } catch (error) {
+        console.error('Error logging in:', error);
+        return res.status(500).json({ error: 'Internal server error' });
     }
-    
-    
-} catch (error) {
-    console.error('Error logging in:', error);
-    res.status(500).json({ error: 'Internal server error' });
-}
-}
+};
+
 
 const CreateUser = async(req,res)=>{
-    const { name , email, password } = req.body;
-    if(!name || !email || !password){
-        return res.status(401).json({ message: 'Invalid username or password or email' });
+    const { username , email, password } = req.body;
+    // if(!username || !email || !password){
+    //     return res.status(401).json({ message: 'Invalid username or password or email' });
 
-    }
+    // }
     try{
-    const user = new User({ name,email,password});
+    const user = new User({ username,email,password});
     await user.save();
     res.status(201).json({ status: 'success', user });
     

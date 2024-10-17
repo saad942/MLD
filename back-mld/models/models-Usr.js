@@ -1,11 +1,17 @@
 const mongoose = require('mongoose');
-const AutoIncrement = require('mongoose-sequence')
-const userShema=new mongoose.Schema({
-    name:{type:String},
-    email:{type:String, require: true},
-    password:{type:String, require: true},
-    createdAt: { type: Date, default: Date.now }
+const AutoIncrement = require('mongoose-sequence')(mongoose); // Pass mongoose instance to mongoose-sequence
+
+// Define the user schema
+const userSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    // Other fields...
 });
-userShema.plugin(AutoIncrement,{inc_field:'user_id'});
-const User = mongoose.model('User',userShema);
-module.expport=User;
+
+// Apply the AutoIncrement plugin to auto-increment the 'userId' field
+userSchema.plugin(AutoIncrement, { inc_field: 'userId' });
+
+const User = mongoose.model('User', userSchema);
+
+module.exports = User;
